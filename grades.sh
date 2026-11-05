@@ -167,4 +167,3 @@ else
 fi
 
 echo "Skipped $skipped invalid lines (see warnings above)"
-```
