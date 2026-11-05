@@ -60,7 +60,7 @@ grand_total=0
 # Open and read the CSV file
 {
     # Skip the header
-    read -r header
+    read -r _
 
     while IFS=',' read -r raw_name raw_html raw_css raw_bash raw_git || [[ -n "$raw_name$raw_html$raw_css$raw_bash$raw_git" ]]; do
 
