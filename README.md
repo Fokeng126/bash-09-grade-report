@@ -1,74 +1,77 @@
-# Bash-09-grade-report
+# Bash-09 Grade Report
 
-# Problem statement
-- mkdproject.sh was not found in my machine , it showed just (No such file directory). so i had to create it by hand with mkdir -p, touch, and git init .
+## Problem Statement
 
-- values like 19 broke comparisons. Same trim functions all along .
-
-- I made somen wrong files name like i typed grade.sh instead of grades.sh. That is to say the exact name matters.
+Instructors spend a lot of time calculating student averages and rankings manually. This project automates the process using a Bash script that reads student scores from a CSV file and generates a grade report.
 
 ## Project Goals
-- To show the class average at the bottom
 
-- Rank students from best to worst in an aligned table with no mistake.
+- Calculate each student's average.
+- Rank students from highest to lowest.
+- Assign the correct grade mention.
+- Display the class average.
+- Identify and skip invalid records.
 
-- To read the CVS file of each student score and calculate each of thi
+## Tech Stack
 
-- Also to practice bash , git branches, pull requests.
+- **Bash:** Main scripting language.
+- **AWK:** Used for calculating averages.
+- **Git and GitHub:** Version control and collaboration.
+- **VS Code and Terminal:** Development and testing.
 
-## Tech stack
-- **Bash** : the script itself ('garde.sh')
+## Screenshot
 
-- **awk** : a decimal math for averages.
-
-- **Git and Github** : the version control, branches, and the pull request.
-
-- **VS Code and Terminal** : where I wrote my code and ran everything.
-
-## Screenshoot
-![Grade report output](assets/images/output.png)
+![Grade Report Output](assets/images/output.png)
 
 ## Features
--  Give a mention : Tres bien, Bien, Assez bien, Passable or Echec.
 
-- Show the class average in the footer.
+- Reads student scores from a CSV file.
+- Calculates averages to two decimal places.
+- Assigns mentions: Très bien, Bien, Assez bien, Passable, and Échec.
+- Ranks students from highest to lowest.
+- Displays aligned columns using `printf`.
+- Skips invalid lines and displays warnings.
+- Shows the class average and skipped line count.
+- Handles extra spaces and Windows line endings.
 
-- Show howmany lines are skipped.
+## Installation and Setup
+Clone the repository:
 
-- Prints aligned colums with 'prinf'.
+```bash
+git clone https://github.com/Fokeng126/bash-09-grade-report.git
+```
 
-## Testing
-- I ran three quick test before submitting.'messy.cvs' it my own practice file.
-## Installation and setup
-- Clone the repository:
-   '''bash
-   git clone https://github.com/Fokeng126/bash-09-grade-report.git 
+Enter the project folder:
 
-  - cd bash-09-grade-report
-  - chmod +x grades.sh
-  - ./grades.sh grades.cvs
-    '''
+```bash
+cd bash-09-grade-report
+```
 
-    ## Challenges faced
-  -  **Wrong file name.** I first wrote `grade.sh` instead of `grades.sh`. I renamed it so it matches the project requirements.
+Give the script execution permission:
 
-  - **Decimals in bash.** Bash could not compare numbers like 16.50.So I used `awk` for the average and compared the total out of 80 for the mention.
+```bash
+chmod +x grades.sh
+```
 
-  - **`mkproject.sh` was not found.** The tool was not on my machine, so I created the project folders and files by hand with `mkdir -p`, `touch` and `git init`.
+Run the script:
 
-  ## What I learned 
-  - How to validate input and skip bad lines with a warning on stderr.
+```bash
+./grades.sh grades.csv
+```
 
-  - How to work with git: branches, commits, and pull requests
-  - How to debug step by step (for example, finding that `grades.csv` was empty).
+## Challenges Faced
 
-  - I learned how, how to read a CSV file line by line in bash with `while read` and `IFS=','
+- **Wrong filenames:** I initially used `grade.sh` instead of `grades.sh`.
+- **Decimal calculations:** I used AWK for averages because Bash does not directly support decimal arithmetic.
+- **Missing project tool:** I created the project structure manually using `mkdir`, `touch`, and `git init`.
 
-  ## Author.
-   - ## Author
+## What I Learnt
 
-**Fokeng Joshua Kroos** Junior Developer
-GitHub: [@Fokeng126](https://github.com/Fokeng126)
-Rebase Day 9 project: Grade report.
+- Reading CSV files line by line using Bash.
+- Using functions and AWK in Bash scripts.
+- Validating input and handling errors.
+- Sorting student records and calculating rankings.
+- Working with Git branches, commits, and pull requests.
 
-[def]: ../../..
+## Author
+**Joshua Kroos**
