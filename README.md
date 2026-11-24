@@ -2,58 +2,58 @@
 
 ## Problem Statement
 
-Instructors spend a lot of time calculating student averages and rankings manually. This project automates the process using a Bash script that reads student scores from a CSV file and generates a grade report.
+Instructors spend a lot of time calculating student averages and rankings manually. This project makes the work easier by using a Bash script to read student scores from a CSV file and generate a grade report.
 
-## Project Goals
+## Project Goal
 
-- Calculate each student's average.
-- Rank students from highest to lowest.
-- Assign the correct grade mention.
-- Display the class average.
-- Identify and skip invalid records.
+The goal of this project is to create a simple Bash script that calculates student averages, assigns grade mentions, ranks students, and displays the class average.
 
 ## Tech Stack
 
-- **Bash:** Main scripting language.
-- **AWK:** Used for calculating averages.
-- **Git and GitHub:** Version control and collaboration.
-- **VS Code and Terminal:** Development and testing.
+- **Bash:** Used to write the main script.
+- **AWK:** Used to calculate student averages.
+- **Git and GitHub:** Used to manage and save project changes.
+- **VS Code and Terminal:** Used to write, run, and test the script.
 
-## Screenshot
+## Screenshots
+
+This screenshot shows the output of the Grade Report script.
 
 ![Grade Report Output](assets/images/output.png)
 
 ## Features
 
 - Reads student scores from a CSV file.
-- Calculates averages to two decimal places.
-- Assigns mentions: Très bien, Bien, Assez bien, Passable, and Échec.
-- Ranks students from highest to lowest.
-- Displays aligned columns using `printf`.
-- Skips invalid lines and displays warnings.
-- Shows the class average and skipped line count.
+- Calculates each student's average to two decimal places.
+- Assigns grade mentions: Très bien, Bien, Assez bien, Passable, and Échec.
+- Ranks students from the highest average to the lowest.
+- Displays student information in organized columns.
+- Skips invalid records and displays warning messages.
+- Calculates and displays the class average.
+- Shows the number of skipped records.
 - Handles extra spaces and Windows line endings.
 
 ## Installation and Setup
-Clone the repository:
+
+**1. Clone the repository:**
 
 ```bash
 git clone https://github.com/Fokeng126/bash-09-grade-report.git
 ```
 
-Enter the project folder:
+**2. Enter the project folder:**
 
 ```bash
 cd bash-09-grade-report
 ```
 
-Give the script execution permission:
+**3. Give the script permission to run:**
 
 ```bash
 chmod +x grades.sh
 ```
 
-Run the script:
+**4. Run the script:**
 
 ```bash
 ./grades.sh grades.csv
@@ -61,17 +61,21 @@ Run the script:
 
 ## Challenges Faced
 
-- **Wrong filenames:** I initially used `grade.sh` instead of `grades.sh`.
-- **Decimal calculations:** I used AWK for averages because Bash does not directly support decimal arithmetic.
-- **Missing project tool:** I created the project structure manually using `mkdir`, `touch`, and `git init`.
+- **File naming:** I initially used the wrong filenames and had to correct them to match the project requirements.
+- **Decimal calculations:** Bash does not directly support decimal arithmetic, so I used AWK to calculate student averages.
+- **Input validation:** I learnt how to check student records and skip invalid data without stopping the entire script.
+- **Project setup:** I created the project folders and files manually using terminal commands.
 
 ## What I Learnt
 
-- Reading CSV files line by line using Bash.
-- Using functions and AWK in Bash scripts.
-- Validating input and handling errors.
-- Sorting student records and calculating rankings.
-- Working with Git branches, commits, and pull requests.
+- How to read CSV files line by line using Bash.
+- How to use functions in Bash scripts.
+- How to use AWK for calculations.
+- How to validate input and handle errors.
+- How to sort student records and calculate rankings.
+- How to use Git branches, commits, and pull requests.
+- How to write and test a Bash project.
 
 ## Author
+
 **Joshua Kroos**
